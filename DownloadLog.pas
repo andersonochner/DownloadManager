@@ -20,12 +20,13 @@ type
     procedure setDataFim(const Value: TDateTime);
     procedure setDataInicio(const Value: TDateTime);
     procedure setUrl(const Value: String);
+    procedure setCodigo(const Value: Int64);
 
   public
     property URL : String read getUrl write setUrl;
     property DataInicio : TDateTime read getDataInicio write setDataInicio;
     property DataFim : TDateTime read getDataFim write setDataFim;
-    property Codigo : Int64 read getCodigo;
+    property Codigo : Int64 read getCodigo write setCodigo;
 
   end;
 
@@ -51,6 +52,12 @@ end;
 function TDownloadLog.getUrl: String;
 begin
   result := fURL;
+end;
+
+procedure TDownloadLog.setCodigo(const Value: Int64);
+begin
+  if   fCodigo = 0 then
+       fCodigo := Value;
 end;
 
 procedure TDownloadLog.setDataFim(const Value: TDateTime);
