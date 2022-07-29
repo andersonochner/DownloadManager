@@ -7,9 +7,11 @@ Não usei prefixos para nomes de variáveis e parâmetros de procedures/function
 
 O banco está com o nome fixo de DownloadManager.db, e estou buscando na mesma pasta que o binário estiver.
 
-As DLLs necessárias para o SQLite e SSL também devem estar na mesma pasta.
+As DLLs necessárias para o SQLite também devem estar na mesma pasta.
 
-Optei por notificar tanto a tela como o controller no momento da finalização de um download.
+Optei por notificar somente a tela com os eventos do download.
+
+Usei a API do windows para fazer o download.
 
 
 
